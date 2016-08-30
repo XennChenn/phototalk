@@ -16,3 +16,23 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+body {
+	margin: 0px;
+}
+
+.container {
+	width: 80%;
+}
+
+.panel {
+	margin: 200px auto;
+	opacity: 0.7;
+}
+
+.log-in-background {
+	background-image: url('log-in-background.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+}
