@@ -26,8 +26,9 @@ body {
 }
 
 .panel {
-	margin: 200px auto;
-	opacity: 0.7;
+	margin-top: 20px;
+	margin-bottom: 200px;
+	opacity: 0.75;
 }
 
 .log-in-background {
@@ -35,4 +36,14 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 100%;
+}
+
+.title {
+	h1 {
+		margin-top: 100px;
+		margin-bottom: 50px;
+		font-size: 104px;
+		color: #862d59;
+		font-family: 'Indie Flower';
+	}	
 }
