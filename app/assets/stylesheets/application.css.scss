@@ -38,12 +38,19 @@ body {
 	height: 100%;
 }
 
+.sign-up-background {
+	background-image: url('sign-up-background.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+}
+
 .title {
 	h1 {
 		margin-top: 100px;
 		margin-bottom: 50px;
 		font-size: 104px;
 		color: #862d59;
-		font-family: 'Indie Flower';
+		font-family: 'Indie Flower', cursive;
 	}	
 }
