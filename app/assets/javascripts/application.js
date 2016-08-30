@@ -15,3 +15,12 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function(){
+	$('.description-box').keyup(function(){
+		var textLength = $(this).val().length;
+		var characterLeft = 140 - textLength;
+		$('.counter').text(characterLeft);
+	});	
+})
