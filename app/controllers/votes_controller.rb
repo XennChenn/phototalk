@@ -5,7 +5,7 @@ class VotesController < ApplicationController
     @photo.liked_by current_user
     respond_to do |format|
       format.html { redirect_to :back }
-      format.js { render :upvote }
+      format.js
     end
   end
 
@@ -13,7 +13,7 @@ class VotesController < ApplicationController
     @photo.unliked_by current_user
     respond_to do |format|
       format.html { redirect_to :back }
-      format.js { render :downvote }
+      format.js
     end
   end
 
