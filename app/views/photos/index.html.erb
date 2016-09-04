@@ -2,8 +2,42 @@
 
 <%= render 'shared/navbar' %>
 
-<div class="container">
-	<div class="col-md-8 col-md-offset-2">
-		
-	</div>
+<div class="col-md-6 col-md-offset-3">
+
+	<% @photos.each do |photo| %>
+		<div class="box panel panel-default">
+			<div class="panel-heading">
+				<%= link_to (photo.user.username), user_path(photo.user) %>
+				<p class="pull-right"><%= time_ago_in_words(photo.created_at) %> ago</p>						
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-12">
+						<%= image_tag photo.avatar.url(), class: "img-responsive"%>
+					</div>
+				</div>									
+			</div>
+
+			<div class="panel-footer">
+				<div class="votes">
+					<% if current_user.liked? photo %>
+						<%= link_to unlike_photo_path(photo), method: :get, remote: true, class: "unlike_post" do %>
+							<i class="fa fa-heart-o fa-2x" aria-hidden="true"></i>
+						<% end %>
+						<strong class="vote_count-<%= photo.id %>"><%= photo.get_upvotes.size %> likes</strong>	
+					<% else %>
+						<%= link_to like_photo_path(photo), method: :get, remote: true, class: "like_post" do %>
+							<i class="fa fa-heart-o fa-2x" aria-hidden="true"></i>
+						<% end %> &nbsp;
+						<strong class="vote_count-<%= photo.id %>"><%= photo.get_upvotes.size %> likes</strong>	
+					<% end %>
+				</div>
+				
+				<br>
+				<strong><%= photo.user.email %></strong> &nbsp; <%= photo.description %>
+				<hr>				
+			</div> 
+		</div>		
+	<% end %>
+	
 </div>

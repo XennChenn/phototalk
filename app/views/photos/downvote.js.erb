@@ -1,0 +1,16 @@
+// $('.unlike_post').bind('ajax:success', function(){
+//    $(this).parent().parent().find('.vote_count').html('<%= escape_javascript photo.votes_for.size.to_s %>');
+//    $(this).closest('.unlike_post').hide();
+//    $(this).closest('.votes').html(' <%= link_to like_post_path(photo), remote: true, method: :put, class: "like_post" %>');
+
+// });
+
+// var unlike_post = $('.unlike_post');
+// unlike_post.parent().parent().find('.vote_count').html('<%= escape_javascript photo.get_upvotes.size.to_s %>');
+// unlike_post.closest('.unlike_post').hide();
+// unlike_post.closest('.votes').html(' <%= link_to like_photo_path(photo), remote: true, method: :get, class: "like_post" %>');
+
+$('.unlike_post').bind('ajax:success', function(){
+	$('.vote_count-<%= photo.id %>').html('<%= escape_javascript (render partial: downvote) %>');
+
+})

@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require masonry/jquery.masonry
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
@@ -23,4 +24,15 @@ $(document).ready(function(){
 		var characterLeft = 140 - textLength;
 		$('.counter').text(characterLeft);
 	});	
+
+
+	$(function(){
+
+	  $('#masonry-container').masonry({
+	    itemSelector: '.box',
+	    columnWidth: 100,
+	    gutterWidth: 40
+	  });
+
+	});
 })

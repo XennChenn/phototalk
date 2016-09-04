@@ -14,6 +14,9 @@ gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails', '>= 3.2'
 gem 'paperclip', "~> 5.0.0"
+gem 'masonry-rails'
+gem 'font-awesome-sass'
+gem 'acts_as_votable', '~> 0.10.0'
 
 
 group :development, :test do

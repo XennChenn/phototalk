@@ -1,0 +1,25 @@
+<%= render 'shared/navbar' %>
+
+
+
+
+
+
+<div class="col-md-8 col-md-offset-2">
+	<div class="header text-center">
+		<strong><%= @user.username %></strong>
+	</div>
+	
+	<div class="row">
+		<% @photos.each do |photo| %>
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<%= image_tag photo.avatar.url(:medium), class:"img-responsive" %>
+					</div>
+					
+				</div>
+			</div>	
+		<% end %>
+	</div>
+</div>

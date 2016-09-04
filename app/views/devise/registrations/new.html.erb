@@ -14,11 +14,11 @@
               <%= devise_error_messages! %>
 
               <div class="form-group">
-                <%= f.text_field :username, class: "form-control", placeholder: "Username" %>
+                <%= f.text_field :username, autofocus: true, class: "form-control", placeholder: "Username" %>
               </div>
 
               <div class="form-group">
-                <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email" %>
+                <%= f.email_field :email, class: "form-control", placeholder: "Email" %>
               </div>
 
               <div class="form-group">
