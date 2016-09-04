@@ -127,10 +127,11 @@ body {
 }
 
 
-
-
-
-
+.votes {
+	a:hover, a:focus {
+		text-decoration: none !important;
+	}
+}
 
 
 

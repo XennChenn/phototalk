@@ -36,25 +36,25 @@ class PhotosController < ApplicationController
   	redirect_to photos_path
   end
 
-  def upvote
-    @photo.liked_by current_user
-    respond_to do |format|
-      format.html { redirect_to :back }
-      format.js { render :upvote }
-    end
-    # @photo.liked_by current_user
-    # redirect_to :back
-  end
+  # def upvote
+  #   @photo.liked_by current_user
+  #   respond_to do |format|
+  #     format.html { redirect_to :back }
+  #     format.js { render :upvote }
+  #   end
+  #   # @photo.liked_by current_user
+  #   # redirect_to :back
+  # end
 
-  def downvote
-    @photo.unliked_by current_user
-    respond_to do |format|
-      format.html { redirect_to :back }
-      format.js { render :downvote }
-    end
-    # @photo.unliked_by current_user
-    # redirect_to :back
-  end
+  # def downvote
+  #   @photo.unliked_by current_user
+  #   respond_to do |format|
+  #     format.html { redirect_to :back }
+  #     format.js { render :downvote }
+  #   end
+  #   # @photo.unliked_by current_user
+  #   # redirect_to :back
+  # end
 
   private
   def set_photo

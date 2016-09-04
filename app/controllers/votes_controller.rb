@@ -4,7 +4,7 @@ class VotesController < ApplicationController
   def create
     @photo.liked_by current_user
     respond_to do |format|
-      format.html { redirect_to :back }
+      format.html { redirect_to photos_path }
       format.js
     end
   end
@@ -12,7 +12,7 @@ class VotesController < ApplicationController
   def destroy
     @photo.unliked_by current_user
     respond_to do |format|
-      format.html { redirect_to :back }
+      format.html { redirect_to photos_path }
       format.js
     end
   end
