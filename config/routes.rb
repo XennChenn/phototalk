@@ -10,8 +10,8 @@ Rails.application.routes.draw do
 
   resources :photos do
     member do
-      get "like", to: "photos#upvote"
-      get "unlike", to: "photos#downvote"
+      get "like", to: "votes#create"
+      get "unlike", to: "votes#destroy"
     end
   end
 
