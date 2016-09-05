@@ -1,5 +1,5 @@
 class PhotosController < ApplicationController
-  before_action :set_photo, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
+  before_action :set_photo, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
   def index
@@ -34,26 +34,6 @@ class PhotosController < ApplicationController
   def destroy
   	@photo.destroy
   	redirect_to photos_path
-  end
-
-  def upvote
-    @photo.liked_by current_user
-    respond_to do |format|
-      format.html { redirect_to :back }
-      format.js { render :upvote }
-    end
-    # @photo.liked_by current_user
-    # redirect_to :back
-  end
-
-  def downvote
-    @photo.unliked_by current_user
-    respond_to do |format|
-      format.html { redirect_to :back }
-      format.js { render :downvote }
-    end
-    # @photo.unliked_by current_user
-    # redirect_to :back
   end
 
   private

@@ -1,0 +1,1 @@
+$('#photo-vote-<%= @photo.id %>').html('<%= escape_javascript(render partial: "shared/like", locals: { photo: @photo }) %>');

@@ -1,0 +1,4 @@
+<%= link_to like_photo_path(photo), remote: true, class: "like_post" do %>
+	<i class="fa fa-heart-o fa-2x" aria-hidden="true"></i>
+<% end %>
+<strong class="vote_count-<%= photo.id %>"><%= photo.get_upvotes.size %> likes</strong>
